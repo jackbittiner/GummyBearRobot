@@ -5,3 +5,7 @@ function Robot(x, y) {
 Robot.prototype.moveNorth = function() {
   this.coordinates[1] += 1
 }
+
+Robot.prototype.moveSouth = function() {
+  this.coordinates[1] -= 1
+}

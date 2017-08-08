@@ -18,4 +18,12 @@ describe('Robot', function() {
       expect(robot.coordinates).toEqual([0,1]);
     });
   });
+
+  describe('moveSouth', function() {
+
+    it('subtracts one to the robots y coordinate', function() {
+      robot.moveSouth();
+      expect(robot.coordinates).toEqual([0,-1]);
+    });
+  });
 });
