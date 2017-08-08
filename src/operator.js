@@ -19,6 +19,12 @@ Operator.prototype.moveRobotWest = function() {
   this.robot.coordinates[0] -= 1
 }
 
-// Operator.prototype.makeRobotPickUp = function() {
-//   this.robot
-// }
+Operator.prototype.makeRobotPickUp = function() {
+  var item = null
+  this.warehouse.crates.forEach(function(crate) {
+    if(this.robot.coordinates.toString() === crate.coordinates.toString()) {
+      item = crate.gummybears.pop();
+    }
+  })
+  this.robot.gummybears.push(item);
+}
