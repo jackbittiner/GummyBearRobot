@@ -10,4 +10,12 @@ describe('Robot', function() {
       expect(robot.coordinates).toEqual([0,0]);
     });
   });
+
+  describe('moveNorth', function() {
+
+    it('adds one to the robots y coordinate', function() {
+      robot.moveNorth();
+      expect(robot.coordinates).toEqual([0,1]);
+    });
+  });
 });
