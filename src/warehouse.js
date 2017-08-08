@@ -2,6 +2,7 @@ function Warehouse(x, x2, y, y2){
 	this.coordinates = [];
   this.generateCoordinates(x,x2,y,y2);
   this.crates = [];
+	this.converyorBelt = null
 }
 
 Warehouse.prototype.generateCoordinates = function(x,x2,y,y2) {
@@ -14,4 +15,8 @@ Warehouse.prototype.generateCoordinates = function(x,x2,y,y2) {
 
 Warehouse.prototype.addCrate = function(x, y, quantity) {
   this.crates.push(new Crate(x, y, quantity));
+}
+
+Warehouse.prototype.addConveyorBelt = function(x,y) {
+this.conveyorBelt = new ConveyorBelt(x,y);
 }
