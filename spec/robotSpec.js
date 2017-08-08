@@ -26,4 +26,12 @@ describe('Robot', function() {
       expect(robot.coordinates).toEqual([0,-1]);
     });
   });
+
+  describe('moveEast', function() {
+
+    it('adds one to the robots x coordinate', function() {
+      robot.moveEast();
+      expect(robot.coordinates).toEqual([1,0]);
+    });
+  });
 });

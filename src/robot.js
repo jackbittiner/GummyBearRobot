@@ -9,3 +9,7 @@ Robot.prototype.moveNorth = function() {
 Robot.prototype.moveSouth = function() {
   this.coordinates[1] -= 1
 }
+
+Robot.prototype.moveEast = function() {
+  this.coordinates[0] += 1
+}
