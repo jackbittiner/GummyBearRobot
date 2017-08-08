@@ -34,4 +34,12 @@ describe('Robot', function() {
       expect(robot.coordinates).toEqual([1,0]);
     });
   });
+
+  describe('moveWest', function() {
+
+    it('subtracts one to the robots x coordinate', function() {
+      robot.moveWest();
+      expect(robot.coordinates).toEqual([-1,0]);
+    });
+  });
 });
