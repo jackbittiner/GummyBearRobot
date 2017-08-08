@@ -1,5 +1,6 @@
-function Operator(robotX, robotY) {
+function Operator(robotX, robotY, x, x2, y, y2) {
   this.robot = new Robot(robotX, robotY)
+  this.warehouse = new Warehouse(x, x2, y, y2)
 }
 
 Operator.prototype.moveRobotNorth = function() {

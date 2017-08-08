@@ -1,7 +1,7 @@
 describe('Operator', function() {
 
   beforeEach(function() {
-    operator = new Operator(0, 0);
+    operator = new Operator(0, 0, -2, 2, -2, 2);
   });
 
   describe('moveNorth', function() {
