@@ -1,7 +1,7 @@
 describe('Warehouse', function() {
 
   beforeEach(function() {
-    warehouse = new Warehouse(-3, 3, -3, 3)
+    warehouse = new Warehouse()
   });
 
   describe('initialize', function() {

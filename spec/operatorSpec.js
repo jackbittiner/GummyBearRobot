@@ -1,7 +1,7 @@
 describe('Operator', function() {
 
   beforeEach(function() {
-    operator = new Operator(0, 0, -2, 2, -2, 2);
+    operator = new Operator(0, 0);
   });
 
   describe('moveNorth', function() {
@@ -34,5 +34,18 @@ describe('Operator', function() {
       operator.moveRobotWest();
       expect(operator.robot.coordinates).toEqual([-1,0]);
     });
+  });
+
+  describe('makeRobotPickUp', function() {
+
+
+    beforeEach(function() {
+      operator.warehouse.addCrate(0, 0, 1)
+    });
+
+    // it('adds one gummybear its array when it picks up on a crates coordinates', function() {
+    //   operator.makeRobotPickUp();
+    //   expect(operator.robot.gummybears.length).toEqual(1);
+    // });
   });
 });

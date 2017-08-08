@@ -1,4 +1,4 @@
-function Warehouse(x, x2, y, y2){
+function Warehouse(x = -3, x2 = 3, y = -3, y2 = 3){
 	this.coordinates = [];
   this.generateCoordinates(x,x2,y,y2);
   this.crates = [];
