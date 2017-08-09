@@ -50,6 +50,8 @@ Operator.prototype.makeRobotPickUp = function() {
 Operator.prototype.makeRobotDrop = function() {
   if(this.robot.coordinates.toString() === this.warehouse.conveyorBelt.coordinates.toString()) {
     this.warehouse.conveyorBelt.gummybears.push.apply(this.warehouse.conveyorBelt.gummybears, this.robot.gummybears);
+  } else {
+    this.robot.breakdown();
   }
   this.robot.gummybears = [];
 }

@@ -117,5 +117,11 @@ describe('Operator', function() {
       operator.makeRobotDrop();
       expect(operator.robot.gummybears.length).toEqual(0);
     });
+
+    it('breaks if it tries to drop off if there is no conveyorbelt', function() {
+      operator.makeRobotPickUp();
+      operator.makeRobotDrop();
+      expect(operator.robot.broken).toEqual(true);
+    });
   })
 });
