@@ -109,5 +109,13 @@ describe('Operator', function() {
       expect(operator.warehouse.conveyorBelt.gummybears.length).toEqual(3);
     });
 
+    it('empties the robots gummybear array', function() {
+      operator.makeRobotPickUp();
+      operator.makeRobotPickUp();
+      operator.makeRobotPickUp();
+      operator.moveRobotNorth();
+      operator.makeRobotDrop();
+      expect(operator.robot.gummybears.length).toEqual(0);
+    });
   })
 });
