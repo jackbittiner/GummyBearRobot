@@ -92,4 +92,22 @@ describe('Operator', function() {
       expect(operator.robot.gummybears.length).toEqual(0);
     });
   });
+
+  describe('makeRobotDrop', function() {
+
+    beforeEach(function() {
+      operator.warehouse.addCrate(0, 0, 5);
+      operator.warehouse.addConveyorBelt(0, 1);
+    });
+
+    it('adds the robots gummybears to conveyerbelts gummybear array', function() {
+      operator.makeRobotPickUp();
+      operator.makeRobotPickUp();
+      operator.makeRobotPickUp();
+      operator.moveRobotNorth();
+      operator.makeRobotDrop();
+      expect(operator.warehouse.conveyorBelt.gummybears.length).toEqual(3);
+    });
+
+  })
 });
