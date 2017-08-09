@@ -26,5 +26,7 @@ Operator.prototype.makeRobotPickUp = function() {
       item = crate.gummybears.pop();
     }
   })
-  this.robot.gummybears.push(item);
+  if(item !== undefined) {
+    this.robot.gummybears.push(item);
+  }
 }

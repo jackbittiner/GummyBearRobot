@@ -40,8 +40,8 @@ describe('Operator', function() {
 
 
     beforeEach(function() {
-      operator.warehouse.addCrate(0, 0, 10);
-      operator.warehouse.addCrate(0, 1, 10);
+      operator.warehouse.addCrate(0, 0, 1);
+      operator.warehouse.addCrate(0, 1, 1);
     });
 
     it('adds one gummybear to the robots array when it picks up on a crates coordinates', function() {
@@ -49,10 +49,17 @@ describe('Operator', function() {
       expect(operator.robot.gummybears.length).toEqual(1);
     });
 
+    it('doesnt add one to robot gummybear array if the crate has no gummybears', function() {
+      operator.makeRobotPickUp();
+      operator.makeRobotPickUp();
+      debugger;
+      expect(operator.robot.gummybears.length).toEqual(1);
+    });
+
     it('subtracts one gummybear from the crates array when it picks up on a crates coordinates', function() {
       operator.makeRobotPickUp();
-      expect(operator.warehouse.crates[0].gummybears.length).toEqual(9);
-      expect(operator.warehouse.crates[1].gummybears.length).toEqual(10);
+      expect(operator.warehouse.crates[0].gummybears.length).toEqual(0);
+      expect(operator.warehouse.crates[1].gummybears.length).toEqual(1);
     });
   });
 });
