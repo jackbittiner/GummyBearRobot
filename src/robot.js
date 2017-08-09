@@ -7,3 +7,5 @@ function Robot(x, y) {
 Robot.prototype.breakdown = function() {
   this.broken = true;
 }
+
+module.exports.Robot = Robot;

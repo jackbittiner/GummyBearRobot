@@ -1,7 +1,9 @@
+var c = require('../src/crate')
+
 describe('Crate', function() {
 
   beforeEach(function() {
-    crate = new Crate(1, 0, 5);
+    crate = new c.Crate(1, 0, 5);
   });
 
   describe('initialize', function() {

@@ -1,6 +1,9 @@
+var robot = require('./robot')
+var warehouse = require('./warehouse')
+
 function Operator(robotX, robotY) {
-  this.robot = new Robot(robotX, robotY)
-  this.warehouse = new Warehouse()
+  this.robot = new robot.Robot(robotX, robotY)
+  this.warehouse = new warehouse.Warehouse()
 }
 
 Operator.prototype.moveRobotNorth = function() {
@@ -55,3 +58,5 @@ Operator.prototype.makeRobotDrop = function() {
   }
   this.robot.gummybears = [];
 }
+
+module.exports.Operator = Operator;

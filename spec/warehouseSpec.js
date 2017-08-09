@@ -1,7 +1,9 @@
+var w = require('../src/warehouse')
+
 describe('Warehouse', function() {
 
   beforeEach(function() {
-    warehouse = new Warehouse()
+    warehouse = new w.Warehouse()
   });
 
   describe('initialize', function() {

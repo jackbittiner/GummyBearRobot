@@ -1,7 +1,9 @@
+var cb = require('../src/conveyorBelt')
+
 describe('ConveyorBelt', function() {
 
   beforeEach(function() {
-    converyorBelt = new ConveyorBelt(1, 0);
+    converyorBelt = new cb.ConveyorBelt(1, 0);
   });
 
   describe('initialize', function() {

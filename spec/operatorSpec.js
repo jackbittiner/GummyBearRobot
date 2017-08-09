@@ -1,7 +1,9 @@
+var o = require('../src/operator')
+
 describe('Operator', function() {
 
   beforeEach(function() {
-    operator = new Operator(0, 0);
+    operator = new o.Operator(0, 0);
   });
 
   describe('moveNorth', function() {

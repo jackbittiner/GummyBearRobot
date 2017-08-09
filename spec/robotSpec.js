@@ -1,7 +1,9 @@
+var r = require('../src/robot')
+
 describe('Robot', function() {
 
   beforeEach(function() {
-    robot = new Robot(0, 0);
+    robot = new r.Robot(0, 0);
   });
 
   describe('initialize', function() {

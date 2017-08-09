@@ -1,7 +1,9 @@
+var gb = require('../src/gummybear')
+
 describe('Gummybear', function() {
 
   beforeEach(function() {
-    gummybear = new Gummybear();
+    gummybear = new gb.Gummybear();
   });
 
   describe('initialize', function() {
