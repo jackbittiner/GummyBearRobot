@@ -52,7 +52,6 @@ describe('Operator', function() {
     it('doesnt add one to robot gummybear array if the crate has no gummybears', function() {
       operator.makeRobotPickUp();
       operator.makeRobotPickUp();
-      debugger;
       expect(operator.robot.gummybears.length).toEqual(1);
     });
 
@@ -60,6 +59,13 @@ describe('Operator', function() {
       operator.makeRobotPickUp();
       expect(operator.warehouse.crates[0].gummybears.length).toEqual(0);
       expect(operator.warehouse.crates[1].gummybears.length).toEqual(1);
+    });
+
+    it('breaks the robot if its in a position where there is no crate', function() {
+      operator.moveRobotWest();
+      operator.makeRobotPickUp();
+      expect(operator.robot.broken).toEqual(true);
+      expect(operator.robot.gummybears.length).toEqual(0);
     });
   });
 });
