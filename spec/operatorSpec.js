@@ -10,6 +10,12 @@ describe('Operator', function() {
       operator.moveRobotNorth();
       expect(operator.robot.coordinates).toEqual([0,1]);
     });
+
+    it('doesnt move if robot is broken', function() {
+      operator.makeRobotPickUp();
+      operator.moveRobotNorth();
+      expect(operator.robot.coordinates).toEqual([0,0]);
+    });
   });
 
   describe('moveSouth', function() {
@@ -17,6 +23,12 @@ describe('Operator', function() {
     it('subtracts one to the robots y coordinate', function() {
       operator.moveRobotSouth();
       expect(operator.robot.coordinates).toEqual([0,-1]);
+    });
+
+    it('doesnt move if robot is broken', function() {
+      operator.makeRobotPickUp();
+      operator.moveRobotSouth();
+      expect(operator.robot.coordinates).toEqual([0,0]);
     });
   });
 
@@ -26,6 +38,12 @@ describe('Operator', function() {
       operator.moveRobotEast();
       expect(operator.robot.coordinates).toEqual([1,0]);
     });
+
+    it('doesnt move if robot is broken', function() {
+      operator.makeRobotPickUp();
+      operator.moveRobotEast();
+      expect(operator.robot.coordinates).toEqual([0,0]);
+    });
   });
 
   describe('moveWest', function() {
@@ -33,6 +51,12 @@ describe('Operator', function() {
     it('subtracts one to the robots x coordinate', function() {
       operator.moveRobotWest();
       expect(operator.robot.coordinates).toEqual([-1,0]);
+    });
+
+    it('doesnt move if robot is broken', function() {
+      operator.makeRobotPickUp();
+      operator.moveRobotWest();
+      expect(operator.robot.coordinates).toEqual([0,0]);
     });
   });
 
