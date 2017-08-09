@@ -18,4 +18,11 @@ describe('Robot', function() {
       expect(robot.gummybears).toEqual([]);
     });
   });
+  describe('breakdown', function() {
+
+    it('sets the broken quality to true', function() {
+      robot.breakdown();
+      expect(robot.broken).toEqual(true);
+    });
+  });
 });
