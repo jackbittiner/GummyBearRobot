@@ -144,7 +144,7 @@ __Jasmine__: I used the node jasmine package for testing. I was
 considering using Mocha and Chai, but as I have more familiarity with
 Jasmine, I chose to use it so I could just crack along with it quicker.
 
-## What Next?
+## What Next With More Time?
 
 I hadn't asked for user input in a Node app before so I struggled a bit with
 how this should be done. By all means, it works, and I'm happy it works, but it
@@ -164,6 +164,10 @@ I ALSO planned for the robot to not be able to move to a coordinate outside
 the warehouse (and potentially break if it hit the boundary as this robot is
 quite prone to breakdown). This is what I would work on next, but I ran out of
 time and it is superfluous to the task at hand.
+
+Further tests for the whole feature. I know it works, because I've ran it
+countless times. However I don't have any tests yet that mock the behaviour of the
+user input and the ensure the final result is as expected.
 
 A big refactor. I got the code working. But it could definitely be a little
 cleaner!
