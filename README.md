@@ -156,7 +156,8 @@ correct way to do it. I just focused on getting it all to work first. With a
 greater understanding of Node, I'm sure I can stick to the correct protocol.
 
 As you might have noticed, I gave my warehouse limitations and a set of all
-possible coordinates inside it. My intention here was to have it that a robot,
+possible coordinates inside it. The default size goes from -3 to 3 on the x&y coordinates.
+My intention here was to have it that a robot,
 crate or conveyor belt can't be constructed outside the warehouse. I was also
 planning that no two crates or conveyor belts can have the same coordinates.
 I ALSO planned for the robot to not be able to move to a coordinate outside

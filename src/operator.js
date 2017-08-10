@@ -41,12 +41,20 @@ Operator.prototype.makeRobotPickUp = function() {
         robotByCrate = true
       }
     })
-    if(robotByCrate === false) {
-      this.robot.breakdown();
-    }
-    if(item !== undefined && item !== null) {
-      this.robot.gummybears.push(item);
-    }
+    this.robotBreakdown(robotByCrate);
+    this.pickUpItem(item);
+  }
+}
+
+Operator.prototype.pickUpItem = function(item) {
+  if(item !== undefined && item !== null) {
+    this.robot.gummybears.push(item);
+  }
+}
+
+Operator.prototype.robotBreakdown = function(robotByCrate) {
+  if(robotByCrate === false) {
+    this.robot.breakdown();
   }
 }
 
