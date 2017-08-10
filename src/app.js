@@ -10,6 +10,7 @@ rl.question('"Where is the conveyor belt?"', (conveyorBeltData) => {
   rl.question('Where is the robot?', (robotData) => {
     rl.question('Where are the crates?', (crateData) => {
       rl.question('What are your commands?', (commandData) => {
+
         var conveyorBeltCoordinates = JSON.parse("[" + conveyorBeltData + "]");
         var conveyorBeltX = conveyorBeltCoordinates[0];
         var conveyorBeltY = conveyorBeltCoordinates[1];
@@ -18,17 +19,38 @@ rl.question('"Where is the conveyor belt?"', (conveyorBeltData) => {
         var robotY = robotCoordinates[1];
         var crateInfo = JSON.parse("[" + crateData + "]");
         var crateInfoSplit = splitArray(crateInfo, 3)
-        var chars = commandData.split('');
+        var commands = commandData.split('');
+
         rl.close();
+
         op = new operator.Operator(robotX, robotY);
         op.warehouse.addConveyorBelt(conveyorBeltX, conveyorBeltY);
         crateInfoSplit.forEach(function(crateInfo) {
           op.warehouse.addCrate(crateInfo[0],crateInfo[1],crateInfo[2])
         });
+        commands.forEach(function(command) {
+          robotCommand(command);
+        });
       });
     });
   });
 });
+
+var robotCommand = function(input) {
+  if(input === "N") {
+    op.moveRobotNorth();
+  } else if(input === "S") {
+    op.moveRobotSouth();
+  } else if(input === "E") {
+    op.moveRobotEast();
+  } else if(input === "W") {
+    op.moveRobotWest();
+  } else if(input === "P") {
+    op.makeRobotPickUp();
+  } else if(input === "D") {
+    op.makeRobotDrop();
+  }
+}
 
 
 var splitArray = function(arr, size) {
