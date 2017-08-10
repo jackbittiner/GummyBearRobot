@@ -17,9 +17,24 @@ rl.question('"Where is the conveyor belt?"', (conveyorBeltData) => {
         var robotX = robotCoordinates[0];
         var robotY = robotCoordinates[1];
         var crateInfo = JSON.parse("[" + crateData + "]");
+        var crateInfoSplit = splitArray(crateInfo, 3)
         var chars = commandData.split('');
         rl.close();
+        op = new operator.Operator(robotX, robotY);
+        op.warehouse.addConveyorBelt(conveyorBeltX, conveyorBeltY);
+        crateInfoSplit.forEach(function(crateInfo) {
+          op.warehouse.addCrate(crateInfo[0],crateInfo[1],crateInfo[2])
+        });
       });
     });
   });
 });
+
+
+var splitArray = function(arr, size) {
+    var groups = [], i;
+    for (i = 0; i < arr.length; i += size) {
+        groups.push(arr.slice(i, i + size));
+    }
+    return groups;
+}
