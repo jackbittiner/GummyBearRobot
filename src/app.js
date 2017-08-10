@@ -31,6 +31,9 @@ rl.question('"Where is the conveyor belt?"', (conveyorBeltData) => {
         commands.forEach(function(command) {
           robotCommand(command);
         });
+        console.log("Gummybears dropped off: " + op.warehouse.conveyorBelt.gummybears.length);
+        console.log("Robot Coordinates: " + op.robot.coordinates);
+        console.log("Is the robot broken? " + op.robot.broken);
       });
     });
   });
