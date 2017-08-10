@@ -134,3 +134,41 @@ Once you've done this, it will display your results. If all has gone perfectly
 to plan, it should look like the following image:
 
 ![App Run](./img/app.png)
+
+## Technologies Used
+
+__Node.js__: This is a node app that is run in the terminal.
+All the actual code is written in Javascript
+
+__Jasmine__: I used the node jasmine package for testing. I was
+considering using Mocha and Chai, but as I have more familiarity with
+Jasmine, I chose to use it so I could just crack along with it quicker.
+
+## What Next?
+
+I hadn't asked for user input in a Node app before so I struggled a bit with
+how this should be done. By all means, it works, and I'm happy it works, but it
+could almost definitely be tidier and done more effectively. This is something
+I'm going to look.
+
+I'm not entirely sure if the way I required exported and required files is the
+correct way to do it. I just focused on getting it all to work first. With a
+greater understanding of Node, I'm sure I can stick to the correct protocol.
+
+As you might have noticed, I gave my warehouse limitations and a set of all
+possible coordinates inside it. My intention here was to have it that a robot,
+crate or conveyor belt can't be constructed outside the warehouse. I was also
+planning that no two crates or conveyor belts can have the same coordinates.
+I ALSO planned for the robot to not be able to move to a coordinate outside
+the warehouse (and potentially break if it hit the boundary as this robot is
+quite prone to breakdown). This is what I would work on next, but I ran out of
+time and it is superfluous to the task at hand.
+
+A big refactor. I got the code working. But it could definitely be a little
+cleaner!
+
+## Thank you
+
+Thank you for taking the time to peruse over this tech test. I hope it's up to
+scratch! Enjoy bossing the robot about and say goodbye to laborious warehouse
+work.
