@@ -70,3 +70,67 @@ the robot to move, pick up gummybears and also drop them.
 __App__: This is the whole shebang! It asks for user input to set the coordinates of
 the constructors above. It also takes in a set of commands for the robot to accomplish.
 Once this is complete, it returns the results.
+
+## How to Run
+
+First things first, lets get this app on your computer and set it up. To do
+this type the following commands into your terminal
+
+```
+$ git clone git@github.com:jackbittiner/GummyBearRobot.git
+$ cd GummyBearRobot
+```
+
+Make sure you have node installed on your computer and then run the following
+command to get set up:
+
+```
+$ npm install
+```
+
+We're good to go!
+
+#### Tests
+
+This application was test-driven. To run the tests type the following into
+the terminal:
+
+```
+$ jasmine-node spec
+```
+
+You should see the following:
+
+![Jasmine Tests](./img/jasmine.png)
+
+(ALL IN THE GREEN! What a beautiful sight!)
+
+#### The App
+
+To start the application, type the following in the command line.
+
+```
+$ node ./src/app.js
+```
+
+You will see the following questions:
+
+"Where is the conveyor belt?" - Answer with coordinates that are comma
+separated eg/ -1,2
+
+Where is the robot? - Answer with coordinates that are comma
+separated eg/ -1,2
+
+Where are the crates? = Answer with coordinates and quantity of gummybears
+that are comma separated eg/ -1,2,10 - if you wish to have multiple crates,
+just write them side by side comma separated eg/ 1,2,3,-1,-2,1 - this will
+create two crates.
+
+What are your commands? - Use the commands stated above (N,E,S,W,P,D) to order
+the robot around. Just do them side by side, capitalised and with no commas eg/
+NPSEWPSSD
+
+Once you've done this, it will display your results. If all has gone perfectly
+to plan, it should look like the following image:
+
+![App Run](./img/app.png)
